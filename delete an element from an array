@@ -1,0 +1,39 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    int i,j,n;
+    //printf("enter the array elements");
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+    scanf("%d",&a[i]);
+    }
+    int x;
+    scanf("%d",&x);
+    for(i=0;i<n;i++)
+    {
+     if(a[i]==x)
+     {
+        for(j=i;j<n;j++)
+        {
+        a[j]=a[j+1];
+        }
+        n--;
+     }
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    
+
+   return 0;
+}
+    
