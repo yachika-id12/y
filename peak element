@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+void search(int a[],int x){
+int j;
+int n=x;
+for(j=0;j<x;j++)
+{
+if(a[0]>a[1]){
+printf("%d",&a[0]);
+break;
+}
+else if(a[n-1]>a[n-2]){
+printf("%d",&a[n-1]);
+break;
+}
+else if(a[j]>a[j-1]&&a[j]>a[j+1]){
+printf("peak element=%d",j);
+break;
+}
+else
+continue;
+}
+void main()
+{
+int i,a[5];
+clrscr();
+printf("element of array");
+for(i=0;i<5;i++)
+scanf("%d",&a[i]);
+}
+search(a,5);
+getch();
+}
+
+
