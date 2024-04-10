@@ -1,0 +1,18 @@
+#include <stdio.h>
+//non tail recursion...(operation pending)
+int print(int n)
+{
+    if(n==0)
+    return 0;
+    else 
+    print(n-1);
+    printf("%d",n);//(in non tail recursion ,statement is left to be execute)
+}
+
+void main()
+{
+    int number;
+    printf("enter any number");
+    scanf("%d",&number);
+    print(number);
+}
