@@ -1,0 +1,15 @@
+#include <stdio.h>
+//non tail recursion...(operation pending)
+int fact(int n){//factorial 
+    if(n==0)
+    return 1;
+    else
+    return n*fact(n-1);
+}
+int main(){
+    int n,factorial;
+    printf("enter a number");
+    scanf("%d",&n);
+    printf("%d",fact(n));
+    return 0;
+}
