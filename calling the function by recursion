@@ -1,0 +1,17 @@
+#include <stdio.h>
+int print(int n)
+{
+    if(n==0)
+    return 0;
+    else 
+    printf("%d",n);
+    print(n-1);
+}
+
+void main()
+{
+    int number;
+    printf("enter any number");
+    scanf("%d",&number);
+    print(number);
+}
