@@ -1,0 +1,21 @@
+#include<stdio.h>
+//non Tail recursive function
+int add_array(int array[],int n,int sum)
+{
+    if(n==0)
+    return sum;
+    else
+    return(add_array(array,n-1,(sum+array[n-1])));
+    
+}
+int main()
+{
+    int a[5],result=0;
+    printf("enter the array elements");
+    for( int i=0;i<5;i++){
+    scanf("%d",&a[i]);
+    }
+    int sum= add_array(a,5,result);
+    printf("sum array element=%d",sum);
+    return 0;
+}
