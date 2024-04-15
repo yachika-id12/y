@@ -1,0 +1,27 @@
+#include<stdio.h>
+// Tail recursive function
+int Sum_array( int arr[],int size)
+{
+    if (size ==0) 
+    {
+        return 0;
+        
+    }
+    if(size==1)
+    {
+    return arr[0];
+    }
+else
+return (arr[0]+Sum_array(arr+1,size-1));
+}
+int main()
+{
+    int arr[5],i,add=0;
+    printf("enter the array elements");
+    for(i=0;i<5;i++){
+    scanf("%d",&arr[i]);
+    }
+    add=Sum_array(arr,5);
+    printf("array element=%d",add);
+    return 0;
+}
