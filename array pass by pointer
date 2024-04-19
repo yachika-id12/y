@@ -1,0 +1,15 @@
+#include <stdio.h>
+int * arraypass()
+{
+    static int a[]={3, 4, 5},i;
+    return (a);
+}
+
+void main()
+{
+    int *p,i;
+    p=arraypass();
+    for(i=0;i<3;i++)
+    printf("%d",*(p+i));
+}
+   
