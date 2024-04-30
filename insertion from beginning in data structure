@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include<stdlib.h>
+typedef struct nodetype{
+    int info;
+    struct nodetype *next;
+}node;
+void traversal(node *head)
+{
+    while(head!=NULL)
+    {
+        printf("%d",head->info);
+        head=head->next;
+
+void main()
+{
+    int a=1;
+    node*ptr;
+    node*head=NULL;
+    while(a)
+    {
+        ptr=(node*)malloc(sizeof(node));
+        printf("enter the info of the node");
+        scanf("%d",&ptr->info);
+        
+        if(head==NULL)
+        {
+            head=ptr;
+            ptr->next=NULL;
+        }
+        else
+        {
+            ptr->next=head;
+            head=ptr;
+            
+        }
+        printf("do you want to continue press 1 for yes and 0 for  no");
+        scanf("%d",&a);
+    
+    traversal(head);
+    }
+}
